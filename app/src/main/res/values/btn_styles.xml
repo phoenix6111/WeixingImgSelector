@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PrimaryButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/btn_primary_bg</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="BlueButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/btn_blue_bg</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="DefaultButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/btn_default_bg</item>
+        <item name="android:textColor">@color/primary_black</item>
+    </style>
+</resources>

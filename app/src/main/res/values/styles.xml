@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentOverlay">@null</item><!--去除actionbar下阴影：-->
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme" parent="BaseAppTheme"></style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenExitAnimation">@anim/anim_not_change</item>
+        <item name="android:activityOpenEnterAnimation">@anim/zoom_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/zoom_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_not_change</item>
+        <item name="android:taskOpenExitAnimation">@anim/anim_not_change</item>
+        <item name="android:taskOpenEnterAnimation">@anim/zoom_enter</item>
+        <item name="android:taskCloseExitAnimation">@anim/zoom_exit</item>
+        <item name="android:taskCloseEnterAnimation">@anim/anim_not_change</item>
+        <!--
+        具体这4个属性什么意思呢？假设我们有 2 个 Activity，分别是 A1 和 A2：
+
+        当我们从 A1 启动 A2 时，A1 从屏幕上消失，这个动画叫做 android:activityOpenExitAnimation
+        当我们从 A1 启动 A2 时，A2 出现在屏幕上，这个动画叫做 android:activityOpenEnterAnimation
+        当我们从 A2 退出回到 A1 时，A2 从屏幕上消失，这个叫做 android:activityCloseExitAnimation
+        当我们从 A2 退出回到 A1 时，A1 出现在屏幕上，这个叫做 android:activityCloseEnterAnimation
+        -->
+    </style>
+
+    <style name="dir_popupwindow_anim">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="elevation">0dp</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" >
+        <item name="elevation">0dp</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+    </style>
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+</resources>
